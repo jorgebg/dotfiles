@@ -61,6 +61,7 @@ plugins=(
     thefuck
     zsh-syntax-highlighting
     history-substring-search
+    zsh-completions
 )
 
 # User configuration
@@ -68,6 +69,9 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
+
+# ZSH Completions submodule
+autoload -U compinit && compinit
 
 # You may need to manually set your language environment
 export LANG=en_EN.UTF-8
