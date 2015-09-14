@@ -41,27 +41,27 @@ COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 plugins=(
-    brew
-    extract
-    git
-    fabric
     atom
-    httpie
-    fasd
     autopep8
+    bgnotify
+    brew
     coffee
-    composer
     colored-man
     colorize
+    composer
     django
-    httpie
-    python
-    pip
-    bgnotify
-    thefuck
-    zsh-syntax-highlighting
+    extract
+    fabric
+    fasd
+    git
     history-substring-search
+    httpie
+    httpie
+    pip
+    python
+    thefuck
     zsh-completions
+    zsh-syntax-highlighting
 )
 
 # User configuration
