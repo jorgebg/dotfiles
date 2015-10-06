@@ -65,7 +65,7 @@ plugins=(
 )
 
 # User configuration
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:${HOME}/bin"
 export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -83,5 +83,5 @@ else
   export EDITOR='atom --wait'
 fi
 
-# Docker machines env vars
-eval "$(docker-machine env docker-vm 2> /dev/null)"
+# rbenv
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
