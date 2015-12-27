@@ -7,6 +7,16 @@ alias ifactive="ifconfig | pcregrep -M -o '^[^\t:]+:([^\n]|\n\t)*status: active'
 alias rmpyc="find . -name '*.pyc' -delete"
 alias loadenvs='export $(cat .env | xargs)'
 alias dokku='~/.dokku/contrib/dokku_client.sh'
+alias sshconfig='cat ~/.ssh/config'
+alias dotfiles-env='eval "$(dotfiles-vars)"'
+
+
+function dotfiles-vars {
+cat << EOF
+export GIT_DIR=~/.dotfiles.git
+export GIT_WORK_TREE=~/
+EOF
+}
 
 # Docker machines env vars
 alias docker-default-env='eval "$(docker-machine env default)"'
