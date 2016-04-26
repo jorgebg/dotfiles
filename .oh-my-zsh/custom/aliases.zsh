@@ -1,4 +1,4 @@
-alias zshconfig="atom ~/.zshrc"
+alias zshrc="atom ~/.zshrc"
 alias ohmyzsh="atom ~/.oh-my-zsh"
 alias tree="tree -C"
 alias curlhead="curl -IL"
@@ -10,3 +10,4 @@ alias dokku='~/.dokku/contrib/dokku_client.sh'
 alias sshconfig='cat ~/.ssh/config'
 alias dotfiles-env='eval "$(dotfiles-vars)"'
 alias docker-default-env='eval "$(docker-machine env default)"'
+alias ccat="colorize"
