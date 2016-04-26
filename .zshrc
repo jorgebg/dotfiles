@@ -51,13 +51,14 @@ plugins=(
     colorize
     composer
     django
+    encode64
     extract
     fabric
     fasd
     git
+    git-extras
     grunt
     history-substring-search
-    httpie
     httpie
     pip
     python
@@ -96,3 +97,5 @@ source $(brew --prefix nvm)/nvm.sh
 
 # added by travis gem
 [ -f /Users/jorge/.travis/travis.sh ] && source /Users/jorge/.travis/travis.sh
+
+setopt extended_glob
