@@ -2,7 +2,7 @@ function activate () {
     . `find . -name activate | head -n 1`
 }
 
-function dotfiles-vars {
+function dotfiles {
     cat << EOF
 export GIT_DIR=~/.dotfiles.git
 export GIT_WORK_TREE=~/
@@ -21,6 +21,15 @@ function wsclone {
     hub clone $1 .
 }
 
+function clean-desktop {
+    TARGET=~/Desktop/Stack/$(date "+%Y-%m-%d")/
+    mkdir -p $TARGET
+    mv ~/Desktop/^Stack $TARGET
+}
+
+function whiletrue {
+    while true; do $@; done;
+}
 
 # OS X
 
