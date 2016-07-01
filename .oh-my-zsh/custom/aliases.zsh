@@ -11,3 +11,6 @@ alias sshconfig='cat ~/.ssh/config'
 alias dotfiles-env='eval "$(dotfiles-vars)"'
 alias docker-default-env='eval "$(docker-machine env default)"'
 alias ccat="colorize"
+alias dns-restart="sudo killall -HUP mDNSResponder"
+alias myip='dig +short myip.opendns.com @resolver1.opendns.com'
+alias git-search-first-commit='git log --source --all -S'
