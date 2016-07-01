@@ -58,3 +58,33 @@ end tell
 return
 EOF
 }
+
+# function host-manager {
+#     # https://gist.github.com/nddrylliog/1368532
+#     path="/etc/hosts"
+#     addusage="Usage: `basename $0` -add host address"
+#     remusage="Usage: `basename $0` -remove host"
+#     case "$1" in
+#     -add)
+#       if [ $# -eq 3 ]; then
+#         if [[ -n $(grep "^$3.*[^A-Za-z0-9\.]$2$" ${path}) ]]; then
+#           echo "Duplicate address/host combination, ${path} unchanged."
+#         else
+#           printf "$3\t$2\n" >> ${path}
+#         fi
+#       else
+#         echo $addusage;
+#       fi
+#       ;;
+#     -remove)
+#       if [ $# -eq 2 ]; then
+#         sed -i '' -e "s/^[^#].*[^A-Za-z0-9\.]$2$//g" -e "/^$/ d" ${path}
+#       else
+#         echo $remusage;
+#       fi
+#       ;;
+#     *)
+#       echo $addusage;
+#       echo $remusage;
+#     esac
+# }
