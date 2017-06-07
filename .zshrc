@@ -25,7 +25,7 @@ HYPHEN_INSENSITIVE="true"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
+# ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
@@ -41,29 +41,30 @@ COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 plugins=(
-    atom
+    # atom
     autopep8
-    aws
+    # aws
     bgnotify
     brew
-    coffee
-    colored-man
+    # coffee
+    # colored-man
     colorize
-    composer
+    # composer
     django
     encode64
-    extract
+    # extract
     fabric
     fasd
-    git
-    git-extras
-    grunt
+    # git
+    # git-extras
+    # grunt
     history-substring-search
     httpie
     osx
     pip
     python
-    thefuck
+    # thefuck
+    zsh-brew-services
     zsh-completions
     zsh-syntax-highlighting
 )
