@@ -101,3 +101,5 @@ source $(brew --prefix nvm)/nvm.sh
 [ -f /Users/jorge/.travis/travis.sh ] && source /Users/jorge/.travis/travis.sh
 
 setopt extended_glob
+
+export PATH="$HOME/.yarn/bin:$PATH"
