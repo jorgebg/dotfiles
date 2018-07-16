@@ -4,6 +4,7 @@ function activate () {
 
 function dotfiles {
     cat << EOF
+# Usage: eval \$(dotfiles)
 export GIT_DIR=~/.dotfiles.git
 export GIT_WORK_TREE=~/
 EOF

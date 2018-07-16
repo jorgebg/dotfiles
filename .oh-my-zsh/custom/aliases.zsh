@@ -14,3 +14,4 @@ alias rmpyc="find . -name '*.pyc' -delete"
 alias sshconfig='cat ~/.ssh/config'
 alias tree="tree -C"
 alias zshrc="atom ~/.zshrc"
+alias did="vim +'normal Go' +'r!date' ~/did.txt"
