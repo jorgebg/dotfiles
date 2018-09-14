@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/jorge/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -75,8 +75,8 @@ export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
 
-# ZSH Completions submodule
-autoload -U compinit && compinit
+# ZSH Completions submodule (removed after 1.0)
+# autoload -U compinit && compinit
 
 # You may need to manually set your language environment
 export LANG=en_IE.UTF-8
@@ -102,4 +102,4 @@ source $(brew --prefix nvm)/nvm.sh
 
 setopt extended_glob
 
-export PATH="$HOME/.yarn/bin:$PATH"
+export PATH="$HOME/.yarn/bin:$HOME/bin:$PATH"
