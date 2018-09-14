@@ -2,9 +2,9 @@ function activate () {
     . `find . -name activate | head -n 1`
 }
 
-function dotfiles {
+function dotfiles-env {
+    # Usage: eval \$(dotfiles)
     cat << EOF
-# Usage: eval \$(dotfiles)
 export GIT_DIR=~/.dotfiles.git
 export GIT_WORK_TREE=~/
 EOF

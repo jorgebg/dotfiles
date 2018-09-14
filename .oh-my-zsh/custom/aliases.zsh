@@ -1,9 +1,6 @@
-alias ccat="colorize"
 alias curlhead="curl -IL"
 alias dns-restart="sudo killall -HUP mDNSResponder"
-alias docker-default-env='eval "$(docker-machine env default)"'
-alias dokku='~/.dokku/contrib/dokku_client.sh'
-alias dotfiles-env='eval "$(dotfiles-vars)"'
+alias dotfiles='eval "$(dotfiles-env)"'
 alias git-search-first-commit='git log --source --all -S'
 alias http-server="python3 -m http.server"
 alias ifactive="ifconfig | pcregrep -M -o '^[^\t:]+:([^\n]|\n\t)*status: active'"
