@@ -32,6 +32,35 @@ function whiletrue {
     while true; do $@; done;
 }
 
+function devip_qr {
+    if [ "$1" != "" ]
+    then
+        port=$1
+    else
+        port=8000
+    fi
+    devip | awk '{print $1":'$port'"}' | tee /dev/tty | qr
+}
+
+function gitignore {
+    if [ "$#" -ne 1 ]
+    then
+      echo "Usage: gitignore <TEMPLATE>\nExample: gitignore Python"
+      return 1
+    fi
+  wget https://raw.githubusercontent.com/github/gitignore/master/$1.gitignore -O .gitignore
+}
+
+# function gitpersonal {
+#   cat << EOF
+#     export GIT_AUTHOR_NAME='Jorge Barata'
+#     export GIT_COMMITTER_NAME=$GIT_AUTHOR_NAME
+#     export GIT_AUTHOR_EMAIL='jorge.barata.gonzalez@gmail.com'
+#     export GIT_COMMITTER_EMAIL=$GIT_AUTHOR_EMAIL
+#     export GIT_SSH_COMMAND='ssh -i ~/.ssh/id_rsa_personal'
+# EOF
+# }
+
 # OS X
 
 function vpn-connect {
