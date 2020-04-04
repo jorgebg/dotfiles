@@ -1,4 +1,4 @@
 youtube-dl
-Pygments  # For ccat (colorize-via-pygments)
 qrcode[pil]
 dev-ip
+pipenv

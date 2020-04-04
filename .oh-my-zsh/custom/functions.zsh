@@ -1,4 +1,5 @@
 function activate () {
+    # Search recursively for a python environment in the current path (created with venv or virtualenv) and activate it
     . `find . -name activate | head -n 1`
 }
 
@@ -33,6 +34,11 @@ function whiletrue {
 }
 
 function devip_qr {
+    if ! [ -x "$(command -v devip)" ]; then
+        echo 'Error: devip is not installed.' >&2
+        echo 'Please run:\n  pip3 install dev-ip'
+        return 1
+    fi
     if [ "$1" != "" ]
     then
         port=$1
@@ -51,19 +57,10 @@ function gitignore {
   wget https://raw.githubusercontent.com/github/gitignore/master/$1.gitignore -O .gitignore
 }
 
-# function gitpersonal {
-#   cat << EOF
-#     export GIT_AUTHOR_NAME='Jorge Barata'
-#     export GIT_COMMITTER_NAME=$GIT_AUTHOR_NAME
-#     export GIT_AUTHOR_EMAIL='jorge.barata.gonzalez@gmail.com'
-#     export GIT_COMMITTER_EMAIL=$GIT_AUTHOR_EMAIL
-#     export GIT_SSH_COMMAND='ssh -i ~/.ssh/id_rsa_personal'
-# EOF
-# }
 
 # OS X
 
-function vpn-connect {
+function osx-vpn-connect {
 /usr/bin/env osascript <<-EOF
 tell application "System Events"
         tell current location of network preferences
@@ -77,7 +74,7 @@ end tell
 EOF
 }
 
-function vpn-disconnect {
+function osx-vpn-disconnect {
 /usr/bin/env osascript <<-EOF
 tell application "System Events"
         tell current location of network preferences
@@ -88,33 +85,3 @@ end tell
 return
 EOF
 }
-
-# function host-manager {
-#     # https://gist.github.com/nddrylliog/1368532
-#     path="/etc/hosts"
-#     addusage="Usage: `basename $0` -add host address"
-#     remusage="Usage: `basename $0` -remove host"
-#     case "$1" in
-#     -add)
-#       if [ $# -eq 3 ]; then
-#         if [[ -n $(grep "^$3.*[^A-Za-z0-9\.]$2$" ${path}) ]]; then
-#           echo "Duplicate address/host combination, ${path} unchanged."
-#         else
-#           printf "$3\t$2\n" >> ${path}
-#         fi
-#       else
-#         echo $addusage;
-#       fi
-#       ;;
-#     -remove)
-#       if [ $# -eq 2 ]; then
-#         sed -i '' -e "s/^[^#].*[^A-Za-z0-9\.]$2$//g" -e "/^$/ d" ${path}
-#       else
-#         echo $remusage;
-#       fi
-#       ;;
-#     *)
-#       echo $addusage;
-#       echo $remusage;
-#     esac
-# }
