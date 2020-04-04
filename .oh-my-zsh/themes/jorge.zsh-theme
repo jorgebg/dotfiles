@@ -25,7 +25,7 @@ local box_name='$(box_name)'
 export VIRTUAL_ENV_DISABLE_PROMPT=true
 
 
-PROMPT="%{$FG[136]%}%n%{$FG[126]%}@%{$FG[136]%}${box_name} %{$FG[220]%}${current_dir}%{$reset_color%} ${git_info}
+PROMPT="%{$fg[cyan]%}%n%{$FG[126]%}@%{$fg[blue]%}${box_name} %{$FG[214]%}${current_dir}%{$reset_color%} ${git_info}
 %{$FG[239]%}%* %{$FG[078]%}${virtualenv_info}%{$reset_color%}${prompt_char}%{$reset_color%} "
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$FG[239]%}(%{$FG[126]%}"
