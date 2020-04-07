@@ -85,3 +85,8 @@ end tell
 return
 EOF
 }
+
+
+function osx-dns-flush {
+    sudo killall -HUP mDNSResponder
+}
