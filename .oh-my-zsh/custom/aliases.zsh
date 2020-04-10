@@ -11,3 +11,4 @@ alias rmpyc="find . -name '*.pyc' -delete"
 alias sshconfig='cat ~/.ssh/config'
 alias tree="tree -C"
 alias zshrc="$EDITOR ~/.zshrc"
+alias youtube-dl-album="youtube-dl -o '%(playlist_index)2d - %(title)s.%(ext)s' --extract-audio"
