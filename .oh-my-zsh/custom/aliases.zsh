@@ -15,3 +15,5 @@ alias youtube-dl-album="youtube-dl -o '%(playlist_index)02d - %(title)s.%(ext)s'
 
 if ! command -v pbcopy; then alias pbcopy='xclip -selection clipboard'; fi
 if ! command -v pbpaste; then alias pbpaste='xclip -selection clipboard -o'; fi
+
+if ! command -v open; then alias open="xdg-open"; fi
