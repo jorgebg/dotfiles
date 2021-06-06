@@ -35,6 +35,16 @@ brew bundle
 
 ## Working with the git tree
 
+Whenever you want to to work with your dotfiles git repository, just set the `GIT_DIR` and `GIT_WORK_TREE` evironment variables with the following command:
+
 ```
-eval $(dotfiles) # Exports the GIT_DIR and GIT_WORK_TREE variables
+dotfiles
 ```
+
+`dotfiles` is an alias of `eval $(dotfiles-env)`. You can change the location of your dotfiles git repository by overriding the `dotfiles-env` function. The default variables are:
+
+```
+export GIT_DIR=~/.dotfiles.git
+export GIT_WORK_TREE=~/
+```
+
