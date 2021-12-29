@@ -11,7 +11,8 @@ alias rmpyc="find . -name '*.pyc' -delete"
 alias sshconfig='cat ~/.ssh/config'
 alias tree="tree -C"
 alias zshrc="$EDITOR ~/.zshrc"
-alias youtube-dl-album="youtube-dl -o '%(playlist_index)02d - %(title)s.%(ext)s' --extract-audio --audio-format opus --audio-quality 0 --add-metadata"
+#alias youtube-dl-album="youtube-dl -o '%(playlist_index)02d - %(title)s.%(ext)s' --extract-audio --audio-format opus --audio-quality 0 --add-metadata"
+alias yt-dlp="youtube-dl -o '%(playlist_index)02d - %(title)s.%(ext)s' --extract-audio --audio-format opus --audio-quality 0 --add-metadata"
 
 if ! command -v pbcopy; then alias pbcopy='xclip -selection clipboard'; fi
 if ! command -v pbpaste; then alias pbpaste='xclip -selection clipboard -o'; fi
