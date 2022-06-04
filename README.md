@@ -14,7 +14,7 @@ git init
 git remote add origin git@github.com:jorgebg/dotfiles.git
 git pull --rebase origin master
 
-ln -S .zshrc.$(uname -s) .zshrc
+ln -s .zshrc.$(uname -s) .zshrc
 ```
 
 ### Bootstrap
